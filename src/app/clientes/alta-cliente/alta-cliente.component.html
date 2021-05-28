@@ -1,3 +1,43 @@
+<br>
+<h2>Alta cliente</h2>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nombre</label>
+        <input type="text" class="form-control" placeholder="Nombre"  [(ngModel)]="cliente.nombre">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">CIF:</label>
+        <input type="number" class="form-control"  placeholder="CIF" [(ngModel)]="cliente.cif">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Dirección:</label>
+      <input type="text" class="form-control"  placeholder="Dirección" [(ngModel)]="cliente.direccion">
+    </div>
+
+    <div class="form-row">
+ 
+      <div class="form-group col-md-4">
+        <label for="inputState">Grupo:</label>
+        <select [(ngModel)]="cliente.grupo"  class="form-control">
+        <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.nombre}}</option>
+        </select>
+      </div>
+
+    </div>
+    <button (click)="this.nuevoCliente()" type="submit" class="btn btn-primary">Guardar</button>
+ 
+
+
+
+
+
+
+
+
+<!-- 
+
 <h2>Alta cliente</h2>
 <p>
   <span>Nombre:</span>
@@ -19,4 +59,4 @@
 </p>
 <p>
   <button (click)="this.nuevoCliente()">Guardar</button>
-</p>
+</p> -->
